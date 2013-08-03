@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/refresh"
+        android:orderInCategory="100"
+        android:showAsAction="withText"
+        android:title="새로 고침"/>
+    <item
+        android:id="@+id/lunch"
+        android:orderInCategory="100"
+        android:showAsAction="withText"
+        android:title="오늘의 급식"/>
+</menu>

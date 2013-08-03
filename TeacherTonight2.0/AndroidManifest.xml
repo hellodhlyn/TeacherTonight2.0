@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="lynteam.teachertonight.sec"
+    android:versionCode="201"
+    android:versionName="2.1" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+    <permisson android:name="lynteam.teachertonight.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="lynteam.teachertonight.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_ACCOUNT" />
+    
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <reciever android:name="com.google.andoird.gcm.GCMBroadcastReciever"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="lynteam.teachertonight" />
+            </intent-filter>
+        </reciever>
+        
+        <!-- <reciever android:name="TTWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@widget/mywidget_provider" >
+            </meta-data>
+        </reciever> -->
+        
+        <service android:name=".GCMIntentService" />
+        
+        <activity android:name="lynteam.teachertonight.sec.Feed" android:label="김급식" />
+        <activity android:name="lynteam.teachertonight.sec.AboutMe" android:label="by 29기 도회린" />
+        <activity android:name="lynteam.teachertonight.sec.MainActivity"	android:label="오늘의 사감 2.0">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>  
+    </application>
+
+</manifest>

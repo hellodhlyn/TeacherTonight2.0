@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">오늘의사감 2.0</string>
+    <string name="action_settings"></string>
+    <string name="hello_world">Hello world!</string>
+    <string name="no_install">김급식이 설치되어있지 않습니다. 설치를 위해 Play 스토어로 이동합니다.</string>
+
+</resources>
